@@ -1,0 +1,113 @@
+Name: Farok of Taria
+
+Level: 15
+Class:
+  Monk    : 11
+  Warlock : 4
+Background: Sage
+Race: Tiefling
+
+AC    : 21
+Speed : 65
+HP    : 100
+Proficiency Bonus: 5
+
+Senses:
+  Passive Wisdom : 18
+  Darkvision     : 60
+
+Languages:
+  english
+  infernal
+  primordial
+  colonial
+
+Stats:
+  Str: 16:P
+  Dex: 18:P
+  Con: 14:
+  Int: 12:
+  Wis: 14:P
+  Cha: 16:P
+
+Skill Proficiencies:
+  Acrobatics 
+  Arcana
+  Deception
+  History
+  Intimidation
+  Perception
+  Stealth
+
+
+Weapons:
+  # [Punching]
+  telat rosery beads: simple
+    Attack Bonus: 5
+    Damage: 2d6+3
+
+  brass knuckles of momentum: simple
+      Damage: 1d6+3
+      Attack Bonus: 5
+      Ability: """
+        All melee attacks are now of a magical nature. Your first strike is +1d4 hit
+        die, for each consecutive hit your bonus die increases following this pattern:
+        1d4,1d6,1d8,1d10,1d12
+        If you miss an attack in the chain it resets to a d4.
+        """
+
+  Nanite Strike of Momentum: simple
+    Damage: {{unarmored_strike(1d8)}+2d6+{strength(3)}+1d4
+    Attack bonus: {dexterity(4)+proficency_bonus(5)}+5
+    Ability: """
+      By hardening the nantites in the suit you gain an additional 3d6 to
+      any unarmed strikes. If the damage is greater than an opponents const
+      save, the opponent is knocked unconscious.
+
+      All melee attacks are now of a magical nature. Your first strike is +1d4 hit
+      die, for each consecutive hit your bonus die increases following this pattern:
+      1d4,1d6,1d8,1d10,1d12
+      If you miss an attack in the chain it resets to a d4.
+    """
+
+  # [Slicing]
+  telat dagger:
+    Damage: 2d4+1
+
+  # [Whacking]
+  alis metal staff:
+    Damage: 1d10+3+(proficiency bonus:3 * 2)
+    Attack bonus: 5+(proficiency bonus:3)
+    Ability: """
+      Can be turned to a walking cane with two taps on the ground. To return to a
+      weapon repeat the two taps
+      """
+# End of Weapons --------------------   
+
+
+Spells:
+  Hellish Rebuke:
+    Casting Time: reaction:1
+    Range: 60
+    Components: Vocal,Symatic
+    Duration: Instataneous
+    Description: [[
+You point your finger, and the creature that damaged you is momintarily
+surrounded by flames. The creature must make a Dexterity saving throw. It takes
+2d10 fire damage on a failed save, or half as much damage on a successful one.
+
+Reaction in response to taking damage.
+]]
+  Hex:
+    Casting Time: bonus action
+    Range: 90
+    Components: Vocal, Symatic
+    Duration: concentration, max:1:hr
+    Description: [[
+You place a curse on a creature that you can see within range. Until the
+spell ends, you deal an extra 1d6 necrotic damage to the target whenever you
+hit it with an attack. Also, choose one ability when you cast the spell. The
+target has disadvantage on ability checks made with the chosen ability.
+
+If the target drops to 0 hit points before this spell ends, you can use a
+bonus action on a subsequent turn of yours to curse a new creature.]]

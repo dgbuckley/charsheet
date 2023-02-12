@@ -1,0 +1,3 @@
+[submodule "deps/zx4"]
+	path = deps/zx4
+	url = https://git.sr.ht/~dbuckley/zx4

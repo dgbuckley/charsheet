@@ -12,6 +12,7 @@ pub fn build(b: *std.build.Builder) void {
     const mode = b.standardReleaseOptions();
 
     const exe = b.addExecutable("charsheet", "src/main.zig");
+    exe.addPackagePath("zx4", "deps/zx4/src/main.zig");
     exe.setTarget(target);
     exe.setBuildMode(mode);
     exe.install();
@@ -26,6 +27,7 @@ pub fn build(b: *std.build.Builder) void {
     run_step.dependOn(&run_cmd.step);
 
     const exe_tests = b.addTest("src/main.zig");
+    exe_tests.addPackagePath("zx4", "deps/zx4/src/main.zig");
     exe_tests.setTarget(target);
     exe_tests.setBuildMode(mode);
 
