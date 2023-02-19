@@ -1,3 +1,9 @@
+# Blockers
+
+- handeling missing fields
+
+# TODO
+
 - (weapon and spell) attack interface for allowing attack objects to know when an attack was successful or not etc... (dynamic effects: scaling attacks, buffs)
 - Long term character obj should clean up memory to run long term.
 - allow "complex" weapons/spells:
